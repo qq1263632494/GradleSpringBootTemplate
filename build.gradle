@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'application'
+    id "io.spring.dependency-management" version "1.0.10.RELEASE"
+    id 'org.springframework.boot' version '2.3.1.RELEASE'
+}
+mainClassName = 'edu.bupt.App'
+sourceCompatibility = 1.8
+group 'org.example'
+version '1.0-SNAPSHOT'
+description 'rabbitmq的秒杀系统'
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    mavenLocal()
+    mavenCentral()
+}
+
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.4.0'
+    // https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator
+    compile group: 'org.hibernate.validator', name: 'hibernate-validator', version: '6.1.6.Final'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
+    // https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
+    compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.4'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.4.0'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.4.0'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-amqp
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-amqp', version: '2.4.0'
+    // https://mvnrepository.com/artifact/commons-codec/commons-codec
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.15'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.16'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-configuration-processor
+    compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '2.4.1'
+    // https://mvnrepository.com/artifact/redis.clients/jedis
+    compile group: 'redis.clients', name: 'jedis', version: '3.4.0'
+    // https://mvnrepository.com/artifact/com.alibaba/fastjson
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.75'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.4.1'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
