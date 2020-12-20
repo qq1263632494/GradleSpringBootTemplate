@@ -1,0 +1,2 @@
+# GradleSpringBootTemplate
+初始化一个可打包的springboot项目
